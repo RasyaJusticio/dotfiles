@@ -1,0 +1,5 @@
+[colors]
+
+[colors.primary]
+foreground = "{{foreground}}"
+background = "{{background}}"

@@ -40,6 +40,7 @@ palette = "dark"
 
 [templates]
 hyprland = { template = 'hyprland', target = '~/.config/hypr/colors.conf' }
+alacritty = { template = 'alacritty', target = '~/.config/alacritty/colors.toml' }
 # NOTE: prefer '' over "" for paths, avoids escaping.
 # template: A RELATIVE path that points to `~/.config/wallust/template` (depends on platform)
 # target: ABSOLUTE path in which to place a file with generated templated values.
