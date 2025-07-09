@@ -11,6 +11,8 @@
 !wofi/**
 !alacritty/
 !alacritty/**
+!wallust/
+!wallust/**
 
 !electron-flags.conf
 !pavucontrol.ini
