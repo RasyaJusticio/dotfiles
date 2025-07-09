@@ -1,15 +1,7 @@
 *
 
-!README.md
-!.gitignore
+!.config/
+!.config/**
 
-!hypr/
-!hypr/**
-!waybar/
-!waybar/**
-!wofi/
-!wofi/**
-
-!electron-flags.conf
-!pavucontrol.ini
-!starship.toml
+!.bscripts/
+!.bscripts/**
