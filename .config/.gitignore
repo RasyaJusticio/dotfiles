@@ -9,6 +9,8 @@
 !waybar/**
 !wofi/
 !wofi/**
+!alacritty/
+!alacritty/**
 
 !electron-flags.conf
 !pavucontrol.ini
