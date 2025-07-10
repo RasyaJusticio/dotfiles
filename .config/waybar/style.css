@@ -1,40 +1,34 @@
 @import "./colors.css";
 
 * {
-    font-family: "CaskaydiaCove Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "CaskaydiaCove Nerd Font", sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    margin: 2px;
-    background: alpha(@background, 0.8);
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(to right, @color4, @color2) 1;
-    color: @foreground;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background: transparent;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
+/************************/
+/*	Workspace	*/
+/************************/
+#workspaces {
+    padding: 0;
 }
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+#workspaces button {
+    padding: 0 5px;
+    color: #ffffff;
+    transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: @color2;
+    box-shadow: inset 0 -3px @color6;
 }
 
 button {
@@ -56,24 +50,6 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: @color2;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
 
 #mode {
     background-color: #64727D;
@@ -96,9 +72,17 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
+#mpd,
+#workspaces {
     padding: 0 10px;
-    color: #ffffff;
+    background-color: alpha(@color5, 0.5);
+    background: linear-gradient(to right, alpha(@color2, 0.5), alpha(@color5, 0.5));
+    box-shadow: inset 0 0 10px 1px alpha(@color2, 0.15);
+    border: 2px solid @color2;
+    border-radius: 6px;
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 #window,
