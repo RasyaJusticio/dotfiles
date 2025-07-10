@@ -8,14 +8,8 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "mpd",
-        "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "keyboard-state",
         "tray",
+        "network",
         "clock",
         "battery"
     ],
@@ -32,12 +26,20 @@
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""],
-	"interval": 10
+	"interval": 1
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	"format": "{:%H:%M} ",
         "format-alt": "{:%d-%m-%Y} "
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -99,14 +101,6 @@
             "activated": "",
             "deactivated": ""
         }
-    },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
     },
     "cpu": {
         "format": "{usage}% ",
