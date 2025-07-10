@@ -4,9 +4,8 @@
     "spacing": 6,
     "margin": 6,
     "modules-left": [
+	"custom/arch",
         "hyprland/workspaces"
-    ],
-    "modules-center": [
     ],
     "modules-right": [
         "mpd",
@@ -44,6 +43,10 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false
+    },
+    "custom/arch": {
+	"format": "󰣇",
+	"tooltip": ""
     },
     "keyboard-state": {
         "numlock": true,
