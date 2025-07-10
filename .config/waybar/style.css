@@ -14,11 +14,26 @@ window#waybar.hidden {
 }
 
 /************************/
+/*	 Tooltip	*/
+/************************/
+tooltip {
+    background-color: alpha(@background, 0.9);
+    border: 2px solid @color0;
+	animation: tooltipAnim 150ms ease-in-out;
+}
+
+@keyframes tooltipAnim {
+    from { opacity: 0 }
+    to { opacity: 1; }
+}
+
+/************************/
 /*	 Modules	*/
 /************************/
 #battery,
 #clock,
 #network,
+#pulseaudio,
 #tray,
 #workspaces,
 #custom-arch {
@@ -58,6 +73,13 @@ window#waybar.hidden {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+/************************/
+/*	PulseAudio  	*/
+/************************/
+#pulseaudio {
+	/* */
 }
 
 /************************/
@@ -132,10 +154,6 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
-}
 
 
 #mode {
@@ -184,15 +202,6 @@ label:focus {
 }
 
 
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
 
 #wireplumber {
     background-color: #fff0f5;

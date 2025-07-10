@@ -2,7 +2,7 @@
 {
     "height": 32,
     "spacing": 6,
-    "margin": 6,
+    "margin": "6 6 0 6",
     "modules-left": [
 	"custom/arch",
         "hyprland/workspaces"
@@ -10,6 +10,7 @@
     "modules-right": [
         "tray",
         "network",
+        "pulseaudio",
         "clock",
         "battery"
     ],
@@ -32,6 +33,23 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	"format": "{:%H:%M} ",
         "format-alt": "{:%d-%m-%Y} "
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "  {format_source}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󱡒",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -139,25 +157,6 @@
         "balanced": "",
         "power-saver": ""
       }
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",
