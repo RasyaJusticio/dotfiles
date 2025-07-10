@@ -7,17 +7,13 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "sway/window"
+        "clock"
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
@@ -29,7 +25,6 @@
         "sway/language",
         "battery",
         "battery#bat2",
-        "clock",
         "tray",
         "custom/power"
     ],
@@ -111,9 +106,9 @@
         // }
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+	"format": "{:%d %B - %H:%M}",
+        "format-alt": "{:%Y %m}"
     },
     "cpu": {
         "format": "{usage}% ",
