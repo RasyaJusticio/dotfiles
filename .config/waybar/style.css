@@ -16,8 +16,9 @@ window#waybar.hidden {
 /************************/
 /*	 Modules	*/
 /************************/
-#clock,
 #battery,
+#clock,
+#network,
 #tray,
 #workspaces,
 #custom-arch {
@@ -60,10 +61,25 @@ window#waybar.hidden {
 }
 
 /************************/
+/*	 Network  	*/
+/************************/
+#network {
+	padding-left: 10px;
+	padding-right: 18px;
+	font-size: 16px;
+	color: @foreground;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+    padding-right: 11.5px;
+}
+
+/************************/
 /*	  Tray  	*/
 /************************/
 #tray {
-	padding: 2px 4px;
+	padding: 2px 8px;
 }
 
 #tray > .passive {
@@ -167,13 +183,6 @@ label:focus {
     background-color: #90b1b1;
 }
 
-#network {
-    background-color: #2980b9;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
 
 #pulseaudio {
     background-color: #f1c40f;
