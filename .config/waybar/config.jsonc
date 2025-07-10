@@ -7,7 +7,6 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock"
     ],
     "modules-right": [
         "mpd",
@@ -16,16 +15,31 @@
         "power-profiles-daemon",
         "cpu",
         "memory",
-        "temperature",
-        "backlight",
         "keyboard-state",
-        "sway/language",
-        "battery",
-        "battery#bat2",
         "tray",
-        "custom/power"
+        "clock",
+        "battery"
     ],
     // Modules configuration
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 25
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+	"interval": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%H:%M} ",
+        "format-alt": "{:%d-%m-%Y} "
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -91,11 +105,6 @@
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
     },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{:%d %B - %H:%M}",
-        "format-alt": "{:%Y %m}"
-    },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -115,21 +124,6 @@
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
         "bat": "BAT2"
