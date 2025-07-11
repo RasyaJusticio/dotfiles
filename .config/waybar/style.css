@@ -48,8 +48,9 @@ tooltip {
     transition-duration: .5s;
 }
 
-#clock,
-#battery {
+#battery,
+#clock, 
+#pulseaudio {
 	padding-right: 13px;
 }
 

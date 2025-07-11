@@ -1,6 +1,5 @@
 [colors]
 
 [colors.primary]
-foreground = "#E6FEFE"
-background = "#21212A"
-dim_foreground = "#B7FDFD"
+foreground = "#F1EEC4"
+background = "#161918"
