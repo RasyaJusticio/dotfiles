@@ -13,6 +13,8 @@
 !alacritty/**
 !wallust/
 !wallust/**
+!nvim/
+!nvim/**
 
 !electron-flags.conf
 !pavucontrol.ini
