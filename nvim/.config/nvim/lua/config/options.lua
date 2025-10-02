@@ -1,29 +1,35 @@
 local opt = vim.opt
 
--- Current line highlighting
-opt.cursorline = true
-
--- Number options
+-- General
+opt.hlsearch = true
 opt.number = true
 opt.relativenumber = true
-opt.numberwidth = 2
+opt.showmode = false
 
--- Tab options
+-- Display Settings
+opt.termguicolors = true
+
+-- Scrolling & UI
+opt.cursorline = true
+opt.signcolumn = 'yes'
+opt.wrap = false
+opt.sidescrolloff = 8
+opt.scrolloff = 8
+
+-- Window
+opt.title = true
+opt.titlestring = "NeoVim"
+
+-- Persitent Undo
+vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
+vim.opt.undofile = true
+
+-- Tabs & Indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
+opt.autoindent = true
 
--- Terminal GUI colors
-opt.termguicolors = true
+-- Number options
+opt.numberwidth = 2
 
-vim.diagnostic.config({
-  virtual_text = {
-    spacing = 2,
-    prefix = "●",  -- or “▎” or other symbol
-    severity = { min = vim.diagnostic.severity.ERROR },  -- show only errors, or specify which severities
-  },
-  signs = true,         -- marks in the sign column
-  underline = true,     -- underline problematic code
-  update_in_insert = false,
-  severity_sort = true,
-})
