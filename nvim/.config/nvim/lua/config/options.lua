@@ -37,3 +37,8 @@ opt.autoindent = true
 -- Number options
 opt.numberwidth = 2
 
+-- Code Folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
+
