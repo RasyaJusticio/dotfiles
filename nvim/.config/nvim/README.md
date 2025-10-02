@@ -13,7 +13,8 @@
 | Mode   | Keys             | Action              |
 | ------ | ---------------- | ------------------- |
 | Normal | `<Space>q`       | Quit                |
-| Normal | `<Space>e`       | NeoVim Explorer     |
+| Normal | `<Space>e`       | Open Tree           |
+| Normal | `<Space>i`       | Close Tree          |
 | Normal | `<Space><Space>` | No highlight search |
 
 ### Telescope
@@ -40,4 +41,12 @@
 | ------ | ----- | ------------------------------- |
 | Normal | `gcc` | Comment/uncomment selected line |
 | Visual | `gc`  | Comment/uncomment selected line |
+
+### Code Folding
+
+| Mode   | Keys | Action                       |
+| ------ | ---- | ---------------------------- |
+| Normal | `zc` | Close the fold at the cursor |
+| Normal | `zo` | Open the fold at the cursor |
+| Normal | `za` | Toggle the fold at the cursor |
 
