@@ -26,10 +26,10 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-            for _, server in ipairs(servers) do
-                vim.lsp.config(server, require("lsp." .. server))
-			    vim.lsp.enable(server)
-            end
+			for _, server in ipairs(servers) do
+				vim.lsp.config(server, require("lsp." .. server))
+				vim.lsp.enable(server)
+			end
 		end,
 	},
 }
