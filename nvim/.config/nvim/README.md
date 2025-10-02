@@ -6,6 +6,16 @@
 | ------ | ------- |
 | NeoVim | > v0.11 |
 
+## Installation
+
+You need to clone the TPM, the plugin manager for tmux
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+
+
 ## Keymaps
 
 ### General
