@@ -20,6 +20,10 @@ opt.scrolloff = 8
 opt.title = true
 opt.titlestring = "NeoVim"
 
+-- Netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Persitent Undo
 vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
 vim.opt.undofile = true
