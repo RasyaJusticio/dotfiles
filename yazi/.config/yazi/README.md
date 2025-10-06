@@ -1,0 +1,6 @@
+# Yazi
+
+## Keymaps
+
+https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/keymap-default.toml
+
