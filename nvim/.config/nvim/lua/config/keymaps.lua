@@ -5,13 +5,16 @@ local setKeymap = utils.setKeymap
 setKeymap("n", "<leader>q", vim.cmd.q)
 setKeymap("n", "<leader><leader>", vim.cmd.nohlsearch)
 
--- === Copy, Cut, Delete ===
+-- === Copy, Cut, Edit, Delete ===
 
 -- Replace selected text with the default register without yanking the replaced text
 setKeymap("v", "p", [["_dP]])
 -- Delete selected text without yanking the deleted text
 setKeymap("n", "d", [["_d]])
 setKeymap("v", "d", [["_d]])
+-- Change selected text without yanking the changed text
+setKeymap("n", "c", [["_c]])
+setKeymap("v", "c", [["_c]])
 -- Copy into system clipboard
 setKeymap("n", "<leader>y", '"+y')
 setKeymap("v", "<leader>y", '"+y')
