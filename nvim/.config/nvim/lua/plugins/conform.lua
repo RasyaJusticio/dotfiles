@@ -1,8 +1,5 @@
 return {
 	{
-		"williamboman/mason.nvim",
-	},
-	{
 		"stevearc/conform.nvim",
 		config = function()
 			local conform = require("conform")
@@ -10,14 +7,14 @@ return {
 			conform.setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					markdown = { "prettier" },
-					html = { "prettier" },
-					css = { "prettier" },
-					javascript = { "prettier" },
-					typescript = { "prettier" },
-					javascriptreact = { "prettier" },
-					typescriptreact = { "prettier" },
-					json = { "prettier" },
+					markdown = { "biome" },
+					html = { "biome" },
+					css = { "biome" },
+					javascript = { "biome" },
+					typescript = { "biome" },
+					javascriptreact = { "biome" },
+					typescriptreact = { "biome" },
+					json = { "biome" },
 					php = { "phpcbf" },
 					blade = { "blade-formatter" },
 				},
@@ -25,7 +22,7 @@ return {
 					["phpcbf"] = {
 						command = "phpcbf",
 						args = {
-							"--standard=PSR2",
+							"--standard=PSR12",
 							"$FILENAME",
 						},
 					},
@@ -36,8 +33,5 @@ return {
 				conform.format()
 			end)
 		end,
-	},
-	{
-		"zapling/mason-conform.nvim",
 	},
 }

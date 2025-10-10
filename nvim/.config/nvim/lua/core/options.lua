@@ -11,7 +11,7 @@ opt.termguicolors = true
 
 -- Scrolling & UI
 opt.cursorline = true
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 opt.wrap = false
 opt.sidescrolloff = 8
 opt.scrolloff = 8
@@ -21,12 +21,8 @@ opt.title = true
 opt.titlestring = "NeoVim"
 
 -- Netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- Persitent Undo
-vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
-vim.opt.undofile = true
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- Tabs & Indentation
 opt.tabstop = 4
@@ -41,4 +37,3 @@ opt.numberwidth = 2
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
-
