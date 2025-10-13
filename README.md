@@ -6,7 +6,7 @@ My personal dotfiles that I use for programming and daily use
 
 | Module |
 | ----- |
-| [Neo](./nvim/.config/nvim/README.md) |
+| [Neovim](./nvim/.config/nvim/README.md) |
 | [tmux](./tmux/.config/tmux/README.md) |
 | [yazi](./tmux/.config/yazi/README.md) |
 
