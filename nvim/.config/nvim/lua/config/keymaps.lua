@@ -1,11 +1,34 @@
 local utils = require("core.utils")
 local setKeymap = utils.setKeymap
 
---setKeymap("n", "<leader>e", vim.cmd.Ex) -- Replaced by nvim-tree
 setKeymap("n", "<leader>q", vim.cmd.q)
 setKeymap("n", "<leader><leader>", vim.cmd.nohlsearch)
+setKeymap("n", "<C-s>", vim.cmd.w)
 
--- === Copy, Cut, Edit, Delete ===
+setKeymap("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
+setKeymap("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+setKeymap("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+setKeymap("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+
+setKeymap("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+setKeymap("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+setKeymap("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+setKeymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+
+setKeymap("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+setKeymap("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+setKeymap("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+setKeymap("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+setKeymap("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+setKeymap("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+
+setKeymap("n", "<leader>bd", function()
+	Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
+setKeymap("n", "<leader>bo", function()
+	Snacks.bufdelete.other()
+end, { desc = "Delete Other Buffers" })
+setKeymap("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
 -- Replace selected text with the default register without yanking the replaced text
 setKeymap("v", "p", [["_dP]])
@@ -23,4 +46,3 @@ setKeymap("n", "<leader>Y", '"+Y')
 setKeymap("n", "<leader>p", '"+p')
 setKeymap("n", "<leader>P", '"+P')
 setKeymap("v", "<leader>p", '"+p')
-

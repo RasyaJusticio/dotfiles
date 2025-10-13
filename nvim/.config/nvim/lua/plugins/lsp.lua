@@ -25,6 +25,42 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		opts = {
+			-- Enable this to enable the builtin LSP inlay hints on Neovim.
+			-- Be aware that you also will need to properly configure your LSP server to
+			-- provide the inlay hints.
+			inlay_hints = {
+				enabled = true,
+				exclude = { "vue" }, -- filetypes for which you don't want to enable inlay hints
+			},
+			-- Enable this to enable the builtin LSP code lenses on Neovim.
+			-- Be aware that you also will need to properly configure your LSP server to
+			-- provide the code lenses.
+			codelens = {
+				enabled = false,
+			},
+			-- Enable this to enable the builtin LSP folding on Neovim.
+			-- Be aware that you also will need to properly configure your LSP server to
+			-- provide the folds.
+			folds = {
+				enabled = true,
+			},
+			-- add any global capabilities here
+			capabilities = {
+				workspace = {
+					fileOperations = {
+						didRename = true,
+						willRename = true,
+					},
+				},
+			},
+			-- options for vim.lsp.buf.format
+			-- but can be also overridden when specified
+			format = {
+				formatting_options = nil,
+				timeout_ms = nil,
+			},
+		},
 		config = function()
 			for _, server in ipairs(servers) do
 				vim.lsp.config(server, require("lsp." .. server))
