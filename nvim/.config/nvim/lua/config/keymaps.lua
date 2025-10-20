@@ -1,7 +1,7 @@
 local utils = require("core.utils")
 local setKeymap = utils.setKeymap
 
-setKeymap("n", "<leader>q", vim.cmd.q)
+setKeymap("n", "<Esc>", vim.cmd.q)
 setKeymap("n", "<leader><leader>", vim.cmd.nohlsearch)
 setKeymap("n", "<C-s>", vim.cmd.w)
 
