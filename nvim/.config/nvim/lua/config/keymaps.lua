@@ -7,7 +7,7 @@ setKeymap("n", "<C-q>", function()
 		vim.cmd.q()
 	end
 end)
-setKeymap("n", "<C-s>", vim.cmd.w)
+setKeymap({"n", "i"}, "<C-s>", vim.cmd.w)
 
 setKeymap("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 setKeymap("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
