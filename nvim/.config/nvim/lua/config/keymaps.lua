@@ -13,6 +13,8 @@ setKeymap("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 setKeymap("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
 setKeymap("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 setKeymap("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+setKeymap("n", "<C-c>", "<C-w>c", { desc = "Close current split", remap = true })
+setKeymap("n", "<C-o>", "<C-w>o", { desc = "Close other split except current", remap = true })
 
 setKeymap("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 setKeymap("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
