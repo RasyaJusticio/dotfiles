@@ -1,8 +1,12 @@
 local utils = require("core.utils")
 local setKeymap = utils.setKeymap
 
-setKeymap("n", "<Esc>", vim.cmd.q)
 setKeymap("n", "<leader><leader>", vim.cmd.nohlsearch)
+setKeymap("n", "<C-q>", function()
+	if vim.fn.confirm("Quit all?", "&Yes\n&No", 2) == 1 then
+		vim.cmd.q()
+	end
+end)
 setKeymap("n", "<C-s>", vim.cmd.w)
 
 setKeymap("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
